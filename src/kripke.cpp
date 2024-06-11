@@ -460,6 +460,8 @@ int main(int argc, char **argv) {
    */
 
 #ifdef KRIPKE_USE_CALIPER
+  cali_config_set("CALI_CALIPER_ATTRIBUTE_DEFAULT_SCOPE", "process");
+
   void* adiak_mpi_comm_ptr = nullptr;
 #ifdef KRIPKE_USE_MPI
   MPI_Comm adiak_mpi_comm = MPI_COMM_WORLD;
