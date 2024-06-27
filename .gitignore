@@ -3,4 +3,5 @@ slurm*.out
 *~
 build**
 install**
+!build.sh
 
