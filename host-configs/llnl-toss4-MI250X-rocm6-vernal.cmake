@@ -10,10 +10,10 @@
 
 set(RAJA_COMPILER "RAJA_COMPILER_CLANG" CACHE STRING "")
 
-set(CMAKE_C_COMPILER   "/usr/tce/packages/cray-mpich/cray-mpich-8.1.29-rocmcc-6.0.3-cce-17.0.1-magic/bin/mpiamdclang" CACHE PATH "")
-set(CMAKE_CXX_COMPILER "/usr/tce/packages/cray-mpich/cray-mpich-8.1.29-rocmcc-6.0.3-cce-17.0.1-magic/bin/mpiamdclang++" CACHE PATH "")
-#set(CMAKE_C_COMPILER   "/usr/tce/packages/cray-mpich/cray-mpich-8.1.26-rocmcc-5.6.0-cce-16.0.0a-magic/bin/mpicc" CACHE PATH "")
-#set(CMAKE_CXX_COMPILER "/usr/tce/packages/cray-mpich/cray-mpich-8.1.26-rocmcc-5.6.0-cce-16.0.0a-magic/bin/mpicxx" CACHE PATH "")
+# set(CMAKE_C_COMPILER   "/usr/tce/packages/cray-mpich/cray-mpich-8.1.29-rocmcc-6.0.3-cce-17.0.1-magic/bin/mpiamdclang" CACHE PATH "")
+# set(CMAKE_CXX_COMPILER "/usr/tce/packages/cray-mpich/cray-mpich-8.1.29-rocmcc-6.0.3-cce-17.0.1-magic/bin/mpiamdclang++" CACHE PATH "")
+set(CMAKE_C_COMPILER   "/usr/tce/packages/cray-mpich/cray-mpich-8.1.26-rocmcc-5.6.0-cce-16.0.0a-magic/bin/mpicc" CACHE PATH "")
+set(CMAKE_CXX_COMPILER "/usr/tce/packages/cray-mpich/cray-mpich-8.1.26-rocmcc-5.6.0-cce-16.0.0a-magic/bin/mpicxx" CACHE PATH "")
 
 set(CMAKE_CXX_FLAGS "" CACHE STRING "")
 set(CMAKE_CXX_FLAGS_RELEASE "-std=c++14 -O3 -ffast-math" CACHE STRING "")
