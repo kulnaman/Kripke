@@ -8,15 +8,19 @@ host_file=$BENCHMARK_PATH/benchmarks/kripke/host-configs/llnl-blueos-V100-nvcc-g
 elif [[ "$hostname" == tioga* ]];then
 PREFIX_PATH=$BENCHMARK_PATH/benchmarks/Kripke/install_tioga
 host_file=$BENCHMARK_PATH/benchmarks/Kripke/host-configs/llnl-toss4-MI250X-rocm6-vernal.cmake
+elif [[ "$hostname" =~ "palmetto" ]];then
+PREFIX_PATH=$BENCHMARK_PATH/benchmarks/Kripke/install_palmetto
+host_file=$BENCHMARK_PATH/benchmarks/Kripke/host-configs/palmetto_a100.cmake
 fi
 set -e #Exit on error
 set -o pipefail #also consider pipe when exiting
-source module_file.sh
+ls
+source ./module_file.sh
 rm -rf build
 mkdir build
 cd build
 
 cmake  -C $host_file -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX_PATH ..
-make -j
+make 
 make install
 cp -r kripke.exe $PREFIX_PATH
